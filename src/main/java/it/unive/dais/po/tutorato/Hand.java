@@ -1,11 +1,13 @@
 package it.unive.dais.po.tutorato;
 
 
+import it.unive.dais.po.tutorato.cards.CardIta;
+
 public class Hand {
-    private Card[] cards;
+    private CardIta[] cards;
     private boolean[] used;
 
-    Hand(Card[] cards){
+    Hand(CardIta[] cards){
         this.cards = cards;
         this.used = new boolean[cards.length];
         for (int i = 0; i < cards.length; i++) {
@@ -13,7 +15,7 @@ public class Hand {
         }
     }
 
-    Card play(int pos){ //TODO: add errors
+    CardIta play(int pos){ //TODO: add errors
         if (used[pos]){
             return null;
         }
