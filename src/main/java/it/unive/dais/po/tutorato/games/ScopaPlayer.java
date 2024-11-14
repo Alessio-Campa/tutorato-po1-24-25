@@ -26,8 +26,13 @@ public class ScopaPlayer extends Player<CardIta> {
 
     protected void init(){
         super.init();
+        this.startTurn();
         stash = new ArrayList<>();
         this.scope = 0;
+    }
+
+    public void startTurn(){
+
     }
 
     public CardIta playTurn(List<CardIta> table){

@@ -10,6 +10,10 @@ public class Hand<C extends Card<?>> {
         this.cards = new ArrayList<>();
     }
 
+    public List<C> getCards(){
+        return new ArrayList<>(cards);
+    }
+
     public void addCard(C card){
         cards.add(card);
     }

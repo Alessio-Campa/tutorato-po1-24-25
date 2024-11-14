@@ -1,8 +1,10 @@
 package it.unive.dais.po.tutorato.games;
 
 import it.unive.dais.po.tutorato.cards.Card;
+import it.unive.dais.po.tutorato.cards.CardIta;
 import it.unive.dais.po.tutorato.cards.Hand;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Player<C extends Card<?>> {
@@ -32,6 +34,10 @@ public abstract class Player<C extends Card<?>> {
 
     public final C playCard(int i){
         return hand.removeCard(i);
+    }
+
+    public final List<C> getHand(){
+        return hand.getCards();
     }
 
     public final int getHandSize(){
